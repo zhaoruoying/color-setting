@@ -95,15 +95,19 @@ export default {
     },
     changeHeight () {
       const val = parseInt(this.height)
-      if (val <= 20 || val >100) {
-        this.height = 40
+      if (val < 20) {
+        this.height = 20
+      } else if ( val > 100) {
+        this.height = 100
       }
       this.height = parseInt(this.height)
     },
     changeWidth () {
       const val = parseInt(this.width)
-      if (val < 20 || val >100) {
+      if (val < 20) {
         this.width = 20
+      } else if ( val > 100) {
+        this.width = 100
       }
       this.width = parseInt(this.width)
     }
